@@ -1,6 +1,7 @@
 import { convertFeetToAcres } from "../functions.js";
 import { cutlawn } from "../functions.js";
 import { airquality } from "../functions.js";
+import { yeehaw } from "../functions.js";
 
 //question 1
 describe("text feet to acres", function() {
@@ -81,6 +82,27 @@ describe("test the air quality", function() {
 });
 
 //question 4
-
+describe("yeehaw:", function() {
+  it(" number is /3 & /7 ", function () {
+    let number = 21;
+    let answer = yeehaw(number);
+    expect(answer).toBe("Yee Ha");
+  });
+  it(" number is /3 ", function () {
+    let number = 9;
+    let answer = yeehaw(number);
+    expect(answer).toBe("Yee");
+  });
+  it(" number is /7 ", function () {
+    let number = 14;
+    let answer = yeehaw(number);
+    expect(answer).toBe("Ha");
+  });
+  it(" number is not /3 or /7 ", function () {
+    let number = 5;
+    let answer = yeehaw(number);
+    expect(answer).toBe("Nada");
+  });
+});
 
 //question 5
