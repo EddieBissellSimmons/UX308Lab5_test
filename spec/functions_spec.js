@@ -2,9 +2,10 @@ import { convertFeetToAcres } from "../functions.js";
 import { cutlawn } from "../functions.js";
 import { airquality } from "../functions.js";
 import { yeehaw } from "../functions.js";
+import { slope } from "../functions.js";
 
 //question 1
-describe("text feet to acres", function() {
+describe("converting feet to acres:", function() {
     it(" tesing 43560 feet  ", function () {
         let feet = 43560;
         let acres = convertFeetToAcres(feet);
@@ -23,7 +24,7 @@ describe("text feet to acres", function() {
 });
 
 //question 2
-describe("test cutting the lawn", function() {
+describe("cutting the lawn:", function() {
   it(" a 2x2 lawn, cut at 2/min ", function () {
       let width = 2;
       let length = 2;
@@ -48,7 +49,7 @@ it(" a 10x20 lawn, cut at 0.5/min ", function () {
 });
 
 //question 3
-describe("test the air quality", function() {
+describe("air quality:", function() {
   it(" if the air quality is 5 ", function () {
     let quality = 5;
     let description = airquality(quality);
@@ -106,3 +107,29 @@ describe("yeehaw:", function() {
 });
 
 //question 5
+describe("slope:", function() {
+  it(" (1,1) and (7,4) ", function () {
+    let x1 = 1;
+    let y1 = 1;
+    let x2 = 7;
+    let y2 = 4;
+    let slp = slope(x1,y1,x2,y2);
+    expect(slp).toBe(0.5);
+  });
+  it(" (1,4) and (3,12)", function () {
+    let x1 = 1;
+    let y1 = 4;
+    let x2 = 3;
+    let y2 = 12;
+    let slp = slope(x1,y1,x2,y2);
+    expect(slp).toBe(4);
+  });
+  it(" (4,69) and (1,48)) ", function () {
+    let x1 = 4;
+    let y1 = 69;
+    let x2 = 1;
+    let y2 = 48;
+    let slp = slope(x1,y1,x2,y2);
+    expect(slp).toBe(7);
+  });
+});

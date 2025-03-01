@@ -44,19 +44,15 @@ function yeehaw(number){
     return answer;
 }
 
-/*
-"Yee" if number is evenly divisible by 3
-"Ha" if number is evenly divisible by 7
-"Yee Ha" if number is evenly divisible by both 3 and 7
-"Nada" if number is none of the above
-*/
-
-
 //question 5
-
+function slope(x1,y1,x2,y2){
+    let slp = (y2 - y1) / (x2 - x1);
+    return slp;
+}
 
 //exporting all of the functions
 export {convertFeetToAcres}
 export {cutlawn}
 export {airquality}
 export {yeehaw}
+export {slope}
